@@ -2,7 +2,8 @@ __S0 802 0 ABS 0
 __S1 74 0 ABS 0
 __Hintentry 2 0 CODE 0
 __Lintentry 2 0 CODE 0
-_main 7E2 0 CODE 0
+__end_of_init_leds 7CB 0 CODE 0
+_main 7DF 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 2 0 CODE 0
@@ -62,6 +63,7 @@ __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 ___heap_lo 0 0 ABS 0
 end_of_initialization 7FD 0 CODE 0
+_init_leds 7C1 0 CODE 0
 ___stacklo 0 0 ABS 0
 __Hsfr10 0 0 ABS 0
 __Lsfr10 0 0 ABS 0
@@ -134,7 +136,8 @@ __Hbank8 0 0 ABS 0
 __Lbank8 0 0 ABS 0
 __Hbank9 0 0 ABS 0
 __Lbank9 0 0 ABS 0
-__ptext1 7CE 0 CODE 0
+__ptext1 7C1 0 CODE 0
+__ptext2 7CB 0 CODE 0
 ___stack_hi 0 0 STACK 2
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -152,7 +155,7 @@ __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 __Hcinit 800 0 CODE 0
 __Lcinit 7FD 0 CODE 0
-__end_of_delay_approx 7E2 0 CODE 0
+__end_of_delay_approx 7DF 0 CODE 0
 __Hspace_3 0 0 ABS 0
 __Lspace_3 0 0 ABS 0
 __Hspace_4 10010 0 ABS 0
@@ -212,7 +215,7 @@ intlevel2 0 0 ENTRY 0
 intlevel3 0 0 ENTRY 0
 intlevel4 0 0 ENTRY 0
 intlevel5 0 0 ENTRY 0
-_delay_approx 7CE 0 CODE 0
+_delay_approx 7CB 0 CODE 0
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
 __pcstackCOMMON 70 0 COMMON 1
@@ -220,36 +223,47 @@ start_initialization 7FD 0 CODE 0
 ___int_stack_lo 0 0 STACK 2
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 7E2 0 CODE 0
+__pmaintext 7DF 0 CODE 0
 __initialization 7FD 0 CODE 0
 __end_of_delay_cycles 802 0 STRCODE 0
 %segments
 reset_vec 0 7 CODE 0 0
 cinit FFA FFF CODE FFA 0
 cstackCOMMON 70 73 COMMON 70 1
-maintext FC4 FF9 CODE FC4 0
-text1 F9C FC3 CODE F9C 0
+maintext FBE FF9 CODE FBE 0
+text2 F96 FBD CODE F96 0
+text1 F82 F95 CODE F82 0
 stringtext1 1000 1003 STRCODE 1000 0
 %locals
 dist/default/production\tp1a_helloworld.X.production.o
-C:\Users\mathi\AppData\Local\Temp\xcAs3s0.\driver_tmp_1.s
-763 7FD 0 CODE 0
-766 7FD 0 CODE 0
-772 7FD 0 CODE 0
-774 7FD 0 CODE 0
-775 7FE 0 CODE 0
-38 7E2 0 CODE 0
+C:\Users\mathi\AppData\Local\Temp\xcAsl8g.\driver_tmp_1.s
+764 7FD 0 CODE 0
+767 7FD 0 CODE 0
+773 7FD 0 CODE 0
+775 7FD 0 CODE 0
+776 7FE 0 CODE 0
+38 7DF 0 CODE 0
 main.c
-38 7E2 0 CODE 0
-41 7E2 0 CODE 0
-42 7E2 0 CODE 0
-43 7E7 0 CODE 0
-44 7EB 0 CODE 0
-45 7EE 0 CODE 0
-46 7F3 0 CODE 0
-47 7F7 0 CODE 0
-34 7CE 0 CODE 0
-35 7CE 0 CODE 0
-35 7D9 0 CODE 0
-35 7DD 0 CODE 0
-36 7E1 0 CODE 0
+38 7DF 0 CODE 0
+40 7DF 0 CODE 0
+43 7E2 0 CODE 0
+44 7E7 0 CODE 0
+45 7EB 0 CODE 0
+46 7EE 0 CODE 0
+47 7F3 0 CODE 0
+48 7F7 0 CODE 0
+23 7C1 0 CODE 0
+24 7C1 0 CODE 0
+25 7C3 0 CODE 0
+26 7C4 0 CODE 0
+27 7C5 0 CODE 0
+28 7C6 0 CODE 0
+29 7C7 0 CODE 0
+30 7C8 0 CODE 0
+31 7C9 0 CODE 0
+32 7CA 0 CODE 0
+34 7CB 0 CODE 0
+35 7CB 0 CODE 0
+35 7D6 0 CODE 0
+35 7DA 0 CODE 0
+36 7DE 0 CODE 0

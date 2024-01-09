@@ -1063,35 +1063,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _main ]
 [f ]
-"41
-[; ;main.c: 41:     while(1){
+"40
+[; ;main.c: 40:     init_leds();
+[e ( _init_leds ..  ]
+"42
+[; ;main.c: 42:     while(1){
 [e :U 793 ]
 {
-"42
-[; ;main.c: 42:         PORTD |= 15;
-[e =| _PORTD -> -> 15 `i `Vuc ]
 "43
-[; ;main.c: 43:         PORTB &= 239;
-[e =& _PORTB -> -> 239 `i `Vuc ]
+[; ;main.c: 43:         PORTD |= 15;
+[e =| _PORTD -> -> 15 `i `Vuc ]
 "44
-[; ;main.c: 44:         delay_approx();
-[e ( _delay_approx ..  ]
+[; ;main.c: 44:         PORTB &= 239;
+[e =& _PORTB -> -> 239 `i `Vuc ]
 "45
-[; ;main.c: 45:         PORTB |= 15;
-[e =| _PORTB -> -> 15 `i `Vuc ]
-"46
-[; ;main.c: 46:         PORTD &= 239;
-[e =& _PORTD -> -> 239 `i `Vuc ]
-"47
-[; ;main.c: 47:         delay_approx();
+[; ;main.c: 45:         delay_approx();
 [e ( _delay_approx ..  ]
+"46
+[; ;main.c: 46:         PORTB |= 15;
+[e =| _PORTB -> -> 15 `i `Vuc ]
+"47
+[; ;main.c: 47:         PORTD &= 239;
+[e =& _PORTD -> -> 239 `i `Vuc ]
 "48
-[; ;main.c: 48:     }
+[; ;main.c: 48:         delay_approx();
+[e ( _delay_approx ..  ]
+"49
+[; ;main.c: 49:     }
 }
 [e :U 792 ]
 [e $U 793  ]
 [e :U 794 ]
-"49
-[; ;main.c: 49: }
+"50
+[; ;main.c: 50: }
 [e :UE 791 ]
 }

@@ -7,7 +7,9 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"34 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\tp1a_helloworld.X\main.c
+"23 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\tp1a_helloworld.X\main.c
+[v _init_leds init_leds `(v  1 e 1 0 ]
+"34
 [v _delay_approx delay_approx `(v  1 e 1 0 ]
 "38
 [v _main main `(v  1 e 1 0 ]
@@ -42,7 +44,12 @@
 "38 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\tp1a_helloworld.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"49
+"50
+} 0
+"23
+[v _init_leds init_leds `(v  1 e 1 0 ]
+{
+"32
 } 0
 "34
 [v _delay_approx delay_approx `(v  1 e 1 0 ]

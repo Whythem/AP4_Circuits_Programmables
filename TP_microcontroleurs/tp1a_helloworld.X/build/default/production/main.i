@@ -9733,6 +9733,7 @@ void delay_approx() {
 
 void main(void) {
 
+    init_leds();
 
     while(1){
         PORTD |= 15;

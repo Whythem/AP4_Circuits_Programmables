@@ -37,6 +37,7 @@ void delay_approx() {
 
 void main(void) {
     /* Code d'initialisation */
+    init_leds();
     
     while(1){
         PORTD |= 15;
