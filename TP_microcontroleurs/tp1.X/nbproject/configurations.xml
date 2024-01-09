@@ -13,7 +13,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>../Ressources/configbits.h</itemPath>
-      <itemPath>../Ressources/main.c</itemPath>
+      <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
