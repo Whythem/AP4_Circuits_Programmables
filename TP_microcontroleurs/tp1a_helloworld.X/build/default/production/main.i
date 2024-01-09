@@ -9714,7 +9714,7 @@ extern __bank0 __bit __timeout;
 #pragma config LVP = OFF
 # 9 "main.c" 2
 # 21 "main.c"
-const int delay_cycles = 500;
+const int delay_cycles = 20000;
 
 void init_leds() {
     TRISDbits.TRISD0 = 0;
@@ -9737,10 +9737,10 @@ void main(void) {
 
     while(1){
         PORTD |= 15;
-        PORTB &= 239;
+        PORTB &= ~15;
         delay_approx();
         PORTB |= 15;
-        PORTD &= 239;
+        PORTD &= ~15;
         delay_approx();
     }
 }

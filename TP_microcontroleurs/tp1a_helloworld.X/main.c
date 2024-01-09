@@ -18,7 +18,7 @@
 #define DIR_LED7 TRISBbits.TRISB2
 #define DIR_LED8 TRISBbits.TRISB3
 
-const int delay_cycles = 500; // NB of delay cycles
+const int delay_cycles = 20000; // NB of delay cycles
 
 void init_leds() {
     DIR_LED1 = 0;
@@ -41,10 +41,10 @@ void main(void) {
     
     while(1){
         PORTD |= 15;
-        PORTB &= 239;
+        PORTB &= ~15;
         delay_approx();
         PORTB |= 15;
-        PORTD &= 239;
+        PORTD &= ~15;
         delay_approx();
     }
 }

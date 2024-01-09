@@ -993,10 +993,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [p x LVP          =  OFF      ]
 "21 main.c
-[; ;main.c: 21: const int delay_cycles = 500;
+[; ;main.c: 21: const int delay_cycles = 20000;
 [v _delay_cycles `Ci ~T0 @X0 1 e ]
 [i _delay_cycles
--> 500 `i
+-> 20000 `i
 ]
 "23
 [; ;main.c: 23: void init_leds() {
@@ -1074,8 +1074,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 43:         PORTD |= 15;
 [e =| _PORTD -> -> 15 `i `Vuc ]
 "44
-[; ;main.c: 44:         PORTB &= 239;
-[e =& _PORTB -> -> 239 `i `Vuc ]
+[; ;main.c: 44:         PORTB &= ~15;
+[e =& _PORTB -> ~ -> 15 `i `Vuc ]
 "45
 [; ;main.c: 45:         delay_approx();
 [e ( _delay_approx ..  ]
@@ -1083,8 +1083,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 46:         PORTB |= 15;
 [e =| _PORTB -> -> 15 `i `Vuc ]
 "47
-[; ;main.c: 47:         PORTD &= 239;
-[e =& _PORTD -> -> 239 `i `Vuc ]
+[; ;main.c: 47:         PORTD &= ~15;
+[e =& _PORTD -> ~ -> 15 `i `Vuc ]
 "48
 [; ;main.c: 48:         delay_approx();
 [e ( _delay_approx ..  ]

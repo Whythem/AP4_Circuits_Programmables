@@ -23,6 +23,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../Ressources</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
