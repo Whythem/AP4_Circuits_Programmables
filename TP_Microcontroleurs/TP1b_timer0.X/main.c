@@ -2,7 +2,7 @@
  * File:   main.c
  * Author: mathias & thibaut
  *
- * Created on 9 janvier 2024, 11:44
+ * Created on 9 janvier 2024, 13:40
  */
 
 
@@ -18,8 +18,6 @@
 #define DIR_LED7 TRISBbits.TRISB2
 #define DIR_LED8 TRISBbits.TRISB3
 
-const int delay_cycles = 20000; // NB of delay cycles
-
 void init_leds() {
     DIR_LED1 = 0;
     DIR_LED2 = 0;
@@ -29,15 +27,14 @@ void init_leds() {
     DIR_LED6 = 0;
     DIR_LED7 = 0;
     DIR_LED8 = 0;
-    
 }
 
 void delay_quasi_pile_poil() {
     for (int i = 0; i <= 100; i++) {
         TMR0 = 130;
-        while(INTCON.TMR0IF == 0) {    
+        while(INTCONbits.TMR0IF == 0) {    
         }
-        INTCON.TMR0IF = 0;    
+        INTCONbits.TMR0IF = 0;    
     }
     
 }
@@ -45,16 +42,16 @@ void delay_quasi_pile_poil() {
 void main(void) {
     /* Code d'initialisation */
     init_leds();
-    OPTION_REG.PS = 3;
-    OPTION_REG.PSA = 0;
-    OPTION_REG.TMR0CS = 1;
+    OPTION_REGbits.PS = 3;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.TMR0CS = 1;
     
     while(1){
-        PORTD |= 14;
-        PORTB &= ~14;
+        PORTD |= 15;
+        PORTB &= ~15;
         delay_quasi_pile_poil();
-        PORTB |= 14;
-        PORTD &= ~14;
+        PORTB |= 15;
+        PORTD &= ~15;
         delay_quasi_pile_poil();
     }
 }
