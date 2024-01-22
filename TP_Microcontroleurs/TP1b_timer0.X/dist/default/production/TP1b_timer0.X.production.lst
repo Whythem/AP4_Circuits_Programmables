@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
-                                                                                               Tue Jan 09 15:28:56 2024
+                                                                                               Mon Jan 22 09:16:38 2024
 
 Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
      1                           	processor	16F1719
@@ -421,7 +421,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    407 ;;
    408 ;; *************** function _main *****************
    409 ;; Defined at:
-   410 ;;		line 42 in file "main.c"
+   410 ;;		line 41 in file "main.c"
    411 ;; Parameters:    Size  Location     Type
    412 ;;		None
    413 ;; Auto vars:     Size  Location     Type
@@ -462,11 +462,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    443                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
    444                           
    445                           
-   446                           ;main.c: 44:     init_leds();
+   446                           ;main.c: 43:     init_leds();
    447     07D8  3187  27B2  3187   	fcall	_init_leds
    448     07DB                     l573:
    449                           
-   450                           ;main.c: 45:     OPTION_REGbits.PS = 3;
+   450                           ;main.c: 44:     OPTION_REGbits.PS = 3;
    451     07DB  0021               	movlb	1	; select bank1
    452     07DC  0815               	movf	21,w	;volatile
    453     07DD  39F8               	andlw	-8
@@ -474,15 +474,15 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    455     07DF  0095               	movwf	21	;volatile
    456     07E0                     l575:
    457                           
-   458                           ;main.c: 46:     OPTION_REGbits.PSA = 0;
+   458                           ;main.c: 45:     OPTION_REGbits.PSA = 0;
    459     07E0  1195               	bcf	21,3	;volatile
    460     07E1                     l577:
    461                           
-   462                           ;main.c: 47:     OPTION_REGbits.TMR0CS = 1;
-   463     07E1  1695               	bsf	21,5	;volatile
+   462                           ;main.c: 46:     OPTION_REGbits.TMR0CS = 0;
+   463     07E1  1295               	bcf	21,5	;volatile
    464     07E2                     l579:
    465                           
-   466                           ;main.c: 50:         PORTD |= 15;
+   466                           ;main.c: 49:         PORTD |= 15;
    467     07E2  300F               	movlw	15
    468     07E3  00F3               	movwf	??_main
    469     07E4  0873               	movf	??_main,w
@@ -490,18 +490,18 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    471     07E6  048F               	iorwf	15,f	;volatile
    472     07E7                     l581:
    473                           
-   474                           ;main.c: 51:         PORTB &= ~15;
+   474                           ;main.c: 50:         PORTB &= ~15;
    475     07E7  30F0               	movlw	240
    476     07E8  00F3               	movwf	??_main
    477     07E9  0873               	movf	??_main,w
    478     07EA  058D               	andwf	13,f	;volatile
    479     07EB                     l583:
    480                           
-   481                           ;main.c: 52:         delay_quasi_pile_poil();
+   481                           ;main.c: 51:         delay_quasi_pile_poil();
    482     07EB  3187  27BC  3187   	fcall	_delay_quasi_pile_poil
    483     07EE                     l585:
    484                           
-   485                           ;main.c: 53:         PORTB |= 15;
+   485                           ;main.c: 52:         PORTB |= 15;
    486     07EE  300F               	movlw	15
    487     07EF  00F3               	movwf	??_main
    488     07F0  0873               	movf	??_main,w
@@ -509,14 +509,14 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    490     07F2  048D               	iorwf	13,f	;volatile
    491     07F3                     l587:
    492                           
-   493                           ;main.c: 54:         PORTD &= ~15;
+   493                           ;main.c: 53:         PORTD &= ~15;
    494     07F3  30F0               	movlw	240
    495     07F4  00F3               	movwf	??_main
    496     07F5  0873               	movf	??_main,w
    497     07F6  058F               	andwf	15,f	;volatile
    498     07F7                     l589:
    499                           
-   500                           ;main.c: 55:         delay_quasi_pile_poil();
+   500                           ;main.c: 54:         delay_quasi_pile_poil();
    501     07F7  3187  27BC  3187   	fcall	_delay_quasi_pile_poil
    502     07FA  2FE2               	goto	l579
    503     07FB  3180  2802         	ljmp	start
@@ -638,7 +638,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    609                           ; Regs used in _delay_quasi_pile_poil: [wreg+status,2]
    610                           
    611                           
-   612                           ;main.c: 33:     for (int i = 0; i <= 100; i++) {
+   612                           ;main.c: 33:     for (int i = 0; i <= 1000; i++) {
    613     07BC  01F1               	clrf	delay_quasi_pile_poil@i
    614     07BD  01F2               	clrf	delay_quasi_pile_poil@i+1
    615     07BE                     l567:
@@ -651,7 +651,7 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    622                           ;main.c: 36:         }
    623                           
    624                           
-   625                           ;main.c: 35:         while(INTCONbits.TMR0IF == 0) {
+   625                           ;main.c: 35:         while(INTCONbits.TMR0IF == 0){
    626     07C1  1D0B               	btfss	11,2	;volatile
    627     07C2  2FC4               	goto	u11
    628     07C3  2FC5               	goto	u10
@@ -672,11 +672,11 @@ Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1
    643     07CA  0872               	movf	delay_quasi_pile_poil@i+1,w
    644     07CB  3A80               	xorlw	128
    645     07CC  00F0               	movwf	??_delay_quasi_pile_poil
-   646     07CD  3080               	movlw	128
+   646     07CD  3083               	movlw	131
    647     07CE  0270               	subwf	??_delay_quasi_pile_poil,w
    648     07CF  1D03               	skipz
    649     07D0  2FD3               	goto	u25
-   650     07D1  3065               	movlw	101
+   650     07D1  30E9               	movlw	233
    651     07D2  0271               	subwf	delay_quasi_pile_poil@i,w
    652     07D3                     u25:
    653     07D3  1C03               	skipc
@@ -1042,7 +1042,7 @@ BANK25              20      0       0      57        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.45 build 20230818022343 
-Symbol Table                                                                                   Tue Jan 09 15:28:56 2024
+Symbol Table                                                                                   Mon Jan 22 09:16:38 2024
 
                            l22 07C1                             l24 07C5                             l25 07D7  
                            l17 07BB                             u10 07C5                             u11 07C4  

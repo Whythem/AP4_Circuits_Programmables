@@ -9726,13 +9726,12 @@ void init_leds() {
 }
 
 void delay_quasi_pile_poil() {
-    for (int i = 0; i <= 100; i++) {
+    for (int i = 0; i <= 1000; i++) {
         TMR0 = 130;
-        while(INTCONbits.TMR0IF == 0) {
+        while(INTCONbits.TMR0IF == 0){
         }
         INTCONbits.TMR0IF = 0;
     }
-
 }
 
 void main(void) {
@@ -9740,7 +9739,7 @@ void main(void) {
     init_leds();
     OPTION_REGbits.PS = 3;
     OPTION_REGbits.PSA = 0;
-    OPTION_REGbits.TMR0CS = 1;
+    OPTION_REGbits.TMR0CS = 0;
 
     while(1){
         PORTD |= 15;
