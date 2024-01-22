@@ -51,6 +51,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1119
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 1119: extern volatile unsigned char PR2 __attribute__((address(0x01B)));
 [v _PR2 `Vuc ~T0 @X0 0 e@27 ]
+"621
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 621:     struct {
+[s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S40 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"620
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 620: typedef union {
+[u S39 `S40 1 ]
+[n S39 . . ]
+"632
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 632: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x00F)));
+[v _PORTDbits `VS39 ~T0 @X0 0 e@15 ]
+"497
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 497:     struct {
+[s S36 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S36 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"496
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 496: typedef union {
+[u S35 `S36 1 ]
+[n S35 . . ]
+"508
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 508: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x00D)));
+[v _PORTBbits `VS35 ~T0 @X0 0 e@13 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1015,187 +1037,187 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x LPBOR      =  OFF      ]
 "35
 [p x LVP          =  OFF      ]
-"21 main.c
-[; ;main.c: 21: void init_leds() {
+"30 main.c
+[; ;main.c: 30: void init_leds() {
 [v _init_leds `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_leds ]
 [f ]
-"22
-[; ;main.c: 22:     TRISDbits.TRISD0 = 0;
+"31
+[; ;main.c: 31:     TRISDbits.TRISD0 = 0;
 [e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
-"23
-[; ;main.c: 23:     TRISDbits.TRISD1 = 0;
+"32
+[; ;main.c: 32:     TRISDbits.TRISD1 = 0;
 [e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
-"24
-[; ;main.c: 24:     TRISDbits.TRISD2 = 0;
+"33
+[; ;main.c: 33:     TRISDbits.TRISD2 = 0;
 [e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
-"25
-[; ;main.c: 25:     TRISDbits.TRISD3 = 0;
+"34
+[; ;main.c: 34:     TRISDbits.TRISD3 = 0;
 [e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
-"26
-[; ;main.c: 26:     TRISBbits.TRISB0 = 0;
+"35
+[; ;main.c: 35:     TRISBbits.TRISB0 = 0;
 [e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
-"27
-[; ;main.c: 27:     TRISBbits.TRISB1 = 0;
+"36
+[; ;main.c: 36:     TRISBbits.TRISB1 = 0;
 [e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-"28
-[; ;main.c: 28:     TRISBbits.TRISB2 = 0;
+"37
+[; ;main.c: 37:     TRISBbits.TRISB2 = 0;
 [e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-"29
-[; ;main.c: 29:     TRISBbits.TRISB3 = 0;
+"38
+[; ;main.c: 38:     TRISBbits.TRISB3 = 0;
 [e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-"30
-[; ;main.c: 30: }
+"39
+[; ;main.c: 39: }
 [e :UE 786 ]
 }
-"32
-[; ;main.c: 32: void delay_timer2() {
+"41
+[; ;main.c: 41: void delay_timer2() {
 [v _delay_timer2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _delay_timer2 ]
 [f ]
-"33
-[; ;main.c: 33:     for (int i = 0; i <= 500; i++) {
+"42
+[; ;main.c: 42:     for (int i = 0; i <= 125; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ <= _i -> 500 `i 788  ]
+[e $ <= _i -> 125 `i 788  ]
 [e $U 789  ]
 [e :U 788 ]
 {
-"34
-[; ;main.c: 34:         while(PIR1bits.TMR2IF == 0) {
+"43
+[; ;main.c: 43:         while(PIR1bits.TMR2IF == 0) {
 [e $U 791  ]
 [e :U 792 ]
 {
-"35
-[; ;main.c: 35:         }
+"44
+[; ;main.c: 44:         }
 }
 [e :U 791 ]
-"34
-[; ;main.c: 34:         while(PIR1bits.TMR2IF == 0) {
+"43
+[; ;main.c: 43:         while(PIR1bits.TMR2IF == 0) {
 [e $ == -> . . _PIR1bits 0 1 `i -> 0 `i 792  ]
 [e :U 793 ]
-"36
-[; ;main.c: 36:         PIR1bits.TMR2IF = 0;
+"45
+[; ;main.c: 45:         PIR1bits.TMR2IF = 0;
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"37
-[; ;main.c: 37:     }
+"46
+[; ;main.c: 46:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ <= _i -> 500 `i 788  ]
+[e $ <= _i -> 125 `i 788  ]
 [e :U 789 ]
 }
-"38
-[; ;main.c: 38: }
+"47
+[; ;main.c: 47: }
 [e :UE 787 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"41
-[; ;main.c: 41: void main(void) {
+"50
+[; ;main.c: 50: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"43
-[; ;main.c: 43:     init_leds();
+"52
+[; ;main.c: 52:     init_leds();
 [e ( _init_leds ..  ]
-"44
-[; ;main.c: 44:     T2CONbits.TMR2ON = 1;
+"53
+[; ;main.c: 53:     T2CONbits.TMR2ON = 1;
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
-"45
-[; ;main.c: 45:     T2CONbits.T2OUTPS = 0;
-[e = . . _T2CONbits 0 2 -> -> 0 `i `uc ]
-"46
-[; ;main.c: 46:     T2CONbits.T2CKPS = 2;
-[e = . . _T2CONbits 0 0 -> -> 2 `i `uc ]
-"47
-[; ;main.c: 47:     PR2 = 249;
+"54
+[; ;main.c: 54:     T2CONbits.T2OUTPS = 7;
+[e = . . _T2CONbits 0 2 -> -> 7 `i `uc ]
+"55
+[; ;main.c: 55:     T2CONbits.T2CKPS = 0;
+[e = . . _T2CONbits 0 0 -> -> 0 `i `uc ]
+"56
+[; ;main.c: 56:     PR2 = 249;
 [e = _PR2 -> -> 249 `i `uc ]
-"48
-[; ;main.c: 48:     while(1){
+"57
+[; ;main.c: 57:     while(1){
 [e :U 796 ]
 {
-"50
-[; ;main.c: 50:         TRISDbits.TRISD0 = 1;
-[e = . . _TRISDbits 0 0 -> -> 1 `i `uc ]
-"51
-[; ;main.c: 51:         delay_timer2();
-[e ( _delay_timer2 ..  ]
-"52
-[; ;main.c: 52:         TRISDbits.TRISD0 = 0;
-[e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
-"53
-[; ;main.c: 53:         TRISDbits.TRISD1 = 1;
-[e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
-"54
-[; ;main.c: 54:         delay_timer2();
-[e ( _delay_timer2 ..  ]
-"55
-[; ;main.c: 55:         TRISDbits.TRISD1 = 0;
-[e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
-"56
-[; ;main.c: 56:         TRISDbits.TRISD2 = 1;
-[e = . . _TRISDbits 0 2 -> -> 1 `i `uc ]
-"57
-[; ;main.c: 57:         delay_timer2();
-[e ( _delay_timer2 ..  ]
-"58
-[; ;main.c: 58:         TRISDbits.TRISD2 = 0;
-[e = . . _TRISDbits 0 2 -> -> 0 `i `uc ]
 "59
-[; ;main.c: 59:         TRISDbits.TRISD3 = 1;
-[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 59:         PORTDbits.RD0 = 1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 "60
 [; ;main.c: 60:         delay_timer2();
 [e ( _delay_timer2 ..  ]
 "61
-[; ;main.c: 61:         TRISDbits.TRISD3 = 0;
-[e = . . _TRISDbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 61:         PORTDbits.RD0 = 0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "62
-[; ;main.c: 62:         TRISBbits.TRISB0 = 1;
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 62:         PORTDbits.RD1 = 1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "63
 [; ;main.c: 63:         delay_timer2();
 [e ( _delay_timer2 ..  ]
 "64
-[; ;main.c: 64:         TRISBbits.TRISB0 = 0;
-[e = . . _TRISBbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 64:         PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "65
-[; ;main.c: 65:         TRISBbits.TRISB1 = 1;
-[e = . . _TRISBbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 65:         PORTDbits.RD2 = 1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "66
 [; ;main.c: 66:         delay_timer2();
 [e ( _delay_timer2 ..  ]
 "67
-[; ;main.c: 67:         TRISBbits.TRISB1 = 0;
-[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 67:         PORTDbits.RD2 = 0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "68
-[; ;main.c: 68:         TRISBbits.TRISB2 = 1;
-[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 68:         PORTDbits.RD3 = 1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 "69
 [; ;main.c: 69:         delay_timer2();
 [e ( _delay_timer2 ..  ]
 "70
-[; ;main.c: 70:         TRISBbits.TRISB2 = 0;
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 70:         PORTDbits.RD3 = 0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
 "71
-[; ;main.c: 71:         TRISBbits.TRISB3 = 1;
-[e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 71:         PORTBbits.RB0 = 1;
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
 "72
 [; ;main.c: 72:         delay_timer2();
 [e ( _delay_timer2 ..  ]
 "73
-[; ;main.c: 73:         TRISBbits.TRISB3 = 0;
-[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 73:         PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
 "74
-[; ;main.c: 74:     }
+[; ;main.c: 74:         PORTBbits.RB1 = 1;
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+"75
+[; ;main.c: 75:         delay_timer2();
+[e ( _delay_timer2 ..  ]
+"76
+[; ;main.c: 76:         PORTBbits.RB1 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+"77
+[; ;main.c: 77:         PORTBbits.RB2 = 1;
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+"78
+[; ;main.c: 78:         delay_timer2();
+[e ( _delay_timer2 ..  ]
+"79
+[; ;main.c: 79:         PORTBbits.RB2 = 0;
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+"80
+[; ;main.c: 80:         PORTBbits.RB3 = 1;
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+"81
+[; ;main.c: 81:         delay_timer2();
+[e ( _delay_timer2 ..  ]
+"82
+[; ;main.c: 82:         PORTBbits.RB3 = 0;
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+"83
+[; ;main.c: 83:     }
 }
 [e :U 795 ]
 [e $U 796  ]
 [e :U 797 ]
-"75
-[; ;main.c: 75: }
+"84
+[; ;main.c: 84: }
 [e :UE 794 ]
 }

@@ -9713,7 +9713,7 @@ extern __bank0 __bit __timeout;
 #pragma config LPBOR = OFF
 #pragma config LVP = OFF
 # 9 "main.c" 2
-# 21 "main.c"
+# 30 "main.c"
 void init_leds() {
     TRISDbits.TRISD0 = 0;
     TRISDbits.TRISD1 = 0;
@@ -9726,7 +9726,7 @@ void init_leds() {
 }
 
 void delay_timer2() {
-    for (int i = 0; i <= 500; i++) {
+    for (int i = 0; i <= 125; i++) {
         while(PIR1bits.TMR2IF == 0) {
         }
         PIR1bits.TMR2IF = 0;
@@ -9738,34 +9738,34 @@ void main(void) {
 
     init_leds();
     T2CONbits.TMR2ON = 1;
-    T2CONbits.T2OUTPS = 0;
-    T2CONbits.T2CKPS = 2;
+    T2CONbits.T2OUTPS = 7;
+    T2CONbits.T2CKPS = 0;
     PR2 = 249;
     while(1){
 
-        TRISDbits.TRISD0 = 1;
+        PORTDbits.RD0 = 1;
         delay_timer2();
-        TRISDbits.TRISD0 = 0;
-        TRISDbits.TRISD1 = 1;
+        PORTDbits.RD0 = 0;
+        PORTDbits.RD1 = 1;
         delay_timer2();
-        TRISDbits.TRISD1 = 0;
-        TRISDbits.TRISD2 = 1;
+        PORTDbits.RD1 = 0;
+        PORTDbits.RD2 = 1;
         delay_timer2();
-        TRISDbits.TRISD2 = 0;
-        TRISDbits.TRISD3 = 1;
+        PORTDbits.RD2 = 0;
+        PORTDbits.RD3 = 1;
         delay_timer2();
-        TRISDbits.TRISD3 = 0;
-        TRISBbits.TRISB0 = 1;
+        PORTDbits.RD3 = 0;
+        PORTBbits.RB0 = 1;
         delay_timer2();
-        TRISBbits.TRISB0 = 0;
-        TRISBbits.TRISB1 = 1;
+        PORTBbits.RB0 = 0;
+        PORTBbits.RB1 = 1;
         delay_timer2();
-        TRISBbits.TRISB1 = 0;
-        TRISBbits.TRISB2 = 1;
+        PORTBbits.RB1 = 0;
+        PORTBbits.RB2 = 1;
         delay_timer2();
-        TRISBbits.TRISB2 = 0;
-        TRISBbits.TRISB3 = 1;
+        PORTBbits.RB2 = 0;
+        PORTBbits.RB3 = 1;
         delay_timer2();
-        TRISBbits.TRISB3 = 0;
+        PORTBbits.RB3 = 0;
     }
 }
