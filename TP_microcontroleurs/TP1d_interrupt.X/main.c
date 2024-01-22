@@ -27,6 +27,8 @@
 #define LED7 PORTBbits.RB2
 #define LED8 PORTBbits.RB3
 
+int tick_count = 0;
+
 void init_leds() {
     DIR_LED1 = 0;
     DIR_LED2 = 0;
@@ -36,16 +38,56 @@ void init_leds() {
     DIR_LED6 = 0;
     DIR_LED7 = 0;
     DIR_LED8 = 0;
+    LED1 = 1;
 }
 
-void delay_timer2() {
-    for (int i = 0; i <= 125; i++) {
-        while(PIR1bits.TMR2IF == 0) {    
-        }
-        PIR1bits.TMR2IF = 0; 
+void modif_led() {
+    switch(tick_count) {
+        case 125: 
+            LED1 = 0;
+            LED2 = 1;
+            break;
+        case 250:
+            LED2 = 0;
+            LED3 = 1;
+            break;
+        case 375:
+            LED3 = 0;
+            LED4 = 1;
+            break;
+        case 500:
+            LED4 = 0;
+            LED5 = 1;
+            break;
+        case 625:
+            LED5 = 0;
+            LED6 = 1;
+            break;
+        case 750:
+            LED6 = 0;
+            LED7 = 1;
+            break;
+        case 875:
+            LED7 = 0;
+            LED8 = 1;
+            break;
+        case 1000:
+            LED8 = 0;
+            LED1 = 1;
+            tick_count = 0;
+            break;
     }
 }
 
+void __interrupt() isr(void) {
+    if (PIR1bits.TMR2IF == 1) {
+        tick_count++;
+        if (!(tick_count % 125)) {
+            modif_led();
+        }
+        PIR1bits.TMR2IF = 0; // Réinitialiser le drapeau d'interruption
+    }
+}
 
 void main(void) {
     /* Code d'initialisation */
@@ -53,32 +95,16 @@ void main(void) {
     T2CONbits.TMR2ON = 1;
     T2CONbits.T2OUTPS = 7;
     T2CONbits.T2CKPS = 0;
+    
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.TMR2IE = 1;
+    PIR1bits.TMR2IF = 1;
+    
+    
     PR2 = 249;
     while(1){
         /* Code a executer dans une boucle infinie */
-        LED1 = 1;
-        delay_timer2();
-        LED1 = 0;
-        LED2 = 1;
-        delay_timer2();
-        LED2 = 0;
-        LED3 = 1;
-        delay_timer2();
-        LED3 = 0;
-        LED4 = 1;
-        delay_timer2();
-        LED4 = 0;
-        LED5 = 1;
-        delay_timer2();
-        LED5 = 0;
-        LED6 = 1;
-        delay_timer2();
-        LED6 = 0;
-        LED7 = 1;
-        delay_timer2();
-        LED7 = 0;
-        LED8 = 1;
-        delay_timer2();
-        LED8 = 0;
+
     }
 }
