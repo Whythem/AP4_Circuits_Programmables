@@ -23,6 +23,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S455 . . ]
 "9891
 [v _PWM4CONbits `VS455 ~T0 @X0 0 e@1564 ]
+"11648
+[s S580 :5 `uc 1 ]
+[n S580 . RD0PPS ]
+"11647
+[u S579 `S580 1 ]
+[n S579 . . ]
+"11652
+[v _RD0PPSbits `VS579 ~T0 @X0 0 e@3752 ]
 "1145
 [s S66 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
 [n S66 . T2CKPS TMR2ON T2OUTPS ]
@@ -58,14 +66,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S43 . . ]
 "732
 [v _PIR1bits `VS43 ~T0 @X0 0 e@17 ]
-"11648
-[s S580 :5 `uc 1 ]
-[n S580 . RD0PPS ]
-"11647
-[u S579 `S580 1 ]
-[n S579 . . ]
-"11652
-[v _RD0PPSbits `VS579 ~T0 @X0 0 e@3752 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h
 [; <" INDF0 equ 00h ;# ">
 "74
@@ -731,29 +731,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ANSELBbits 0 0 -> -> 0 `i `uc ]
 "22
 [e = . . _PWM4CONbits 0 4 -> -> 1 `i `uc ]
-"25
-[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+"23
+[e = . . _RD0PPSbits 0 0 -> -> 15 `i `uc ]
 "26
-[e = . . _T2CONbits 0 2 -> -> 1 `i `uc ]
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
 "27
-[e = . . _T2CONbits 0 0 -> -> 2 `i `uc ]
+[e = . . _T2CONbits 0 2 -> -> 7 `i `uc ]
 "28
-[e = _PR2 -> -> 244 `i `uc ]
+[e = . . _T2CONbits 0 0 -> -> 0 `i `uc ]
 "29
+[e = _PR2 -> -> 244 `i `uc ]
+"30
 [e :UE 786 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"31
+"32
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"33
+"34
 [e ( _init ..  ]
-"36
+"37
 [e :U 789 ]
 {
-"37
+"38
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -761,20 +763,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 792  ]
 [e :U 791 ]
 {
-"38
-[e = _PWM4DCH -> / _i -> 4 `i `uc ]
 "39
-[e = . . _PWM4DCLbits 0 1 -> % _i -> 4 `i `uc ]
+[e = _PWM4DCH -> >> _i -> 2 `i `uc ]
 "40
+[e = . . _PWM4DCLbits 0 1 -> & _i -> 3 `i `uc ]
+"41
 [e $U 794  ]
 [e :U 795 ]
 [e :U 794 ]
 [e $ == -> . . _PIR1bits 0 1 `i -> 0 `i 795  ]
 [e :U 796 ]
-"41
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
 "42
-[e = . . _RD0PPSbits 0 0 -> -> 15 `i `uc ]
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
 "43
 }
 [e ++ _i -> 1 `i ]
@@ -790,9 +790,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 797 ]
 {
 "45
-[e = _PWM4DCH -> / _i -> 4 `i `uc ]
+[e = _PWM4DCH -> >> _i -> 2 `i `uc ]
 "46
-[e = . . _PWM4DCLbits 0 1 -> % _i -> 4 `i `uc ]
+[e = . . _PWM4DCLbits 0 1 -> & _i -> 3 `i `uc ]
 "47
 [e $U 800  ]
 [e :U 801 ]
@@ -802,20 +802,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
 "49
-[e = . . _RD0PPSbits 0 0 -> -> 15 `i `uc ]
-"50
 }
 [e -- _i -> 1 `i ]
 [e $ > _i -> 0 `i 797  ]
 [e :U 798 ]
 }
-"52
-[e = . . _RD0PPSbits 0 0 -> -> 15 `i `uc ]
-"53
+"50
 }
 [e :U 788 ]
 [e $U 789  ]
 [e :U 790 ]
-"54
+"51
 [e :UE 787 ]
 }
