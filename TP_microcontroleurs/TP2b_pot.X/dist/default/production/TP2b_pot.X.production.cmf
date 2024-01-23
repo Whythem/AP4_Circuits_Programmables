@@ -13,10 +13,13 @@
 %PSECTS
 $dist/default/production\TP2b_pot.X.production.o
 cinit CODE 0 7FD 7FD 3 2 1
-text1 CODE 0 7D3 7D3 15 2 1
-maintext CODE 0 7E8 7E8 15 2 1
+text1 CODE 0 763 763 18 2 1
+text2 CODE 0 74B 74B A 2 1
+text3 CODE 0 755 755 E 2 1
+maintext CODE 0 77B 77B 82 2 1
+cstackCOMMON COMMON 1 70 70 7 1 1
 config CONFIG 4 8007 8007 2 2 1
-$C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+$C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 2 2 2 2 1
 config CONFIG 4 8007 8007 2 2 1
@@ -62,9 +65,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-7D2 2
+CONST 4-74A 2
 CONST 800-3FFF 2
-ENTRY 4-7D2 2
+ENTRY 4-74A 2
 ENTRY 800-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -89,7 +92,7 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-CODE 4-7D2 2
+CODE 4-74A 2
 CODE 800-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -118,10 +121,10 @@ BANK23 BA0-BEF 1
 BANK24 C20-C6F 1
 BANK25 CA0-CBF 1
 BIGRAM 2000-27EF 1
-COMMON 70-7D 1
-STRCODE 4-7D2 2
+COMMON 77-7D 1
+STRCODE 4-74A 2
 STRCODE 800-3FFF 2
-STRING 4-7D2 2
+STRING 4-74A 2
 STRING 800-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -137,38 +140,79 @@ STRING 800-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\TP2b_pot.X.production.o
-7FD cinit CODE >762:C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_1.s
-7FD cinit CODE >765:C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_1.s
-7FD cinit CODE >771:C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_1.s
-7FD cinit CODE >773:C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_1.s
-7FE cinit CODE >774:C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_1.s
-7D3 text1 CODE >34:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7D3 text1 CODE >35:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7D5 text1 CODE >36:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7D6 text1 CODE >37:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7D7 text1 CODE >38:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7D8 text1 CODE >39:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7D9 text1 CODE >40:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7DA text1 CODE >41:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7DB text1 CODE >42:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7DC text1 CODE >44:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7DD text1 CODE >45:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7DF text1 CODE >47:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7E1 text1 CODE >48:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7E3 text1 CODE >49:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7E5 text1 CODE >50:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7E6 text1 CODE >51:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7E7 text1 CODE >52:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7E8 maintext CODE >53:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7E8 maintext CODE >55:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7EB maintext CODE >59:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7EE maintext CODE >59:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7F2 maintext CODE >60:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7F4 maintext CODE >61:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7F5 maintext CODE >62:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7F6 maintext CODE >63:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7F7 maintext CODE >64:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
-7F9 maintext CODE >65:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7FD cinit CODE >764:C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_1.s
+7FD cinit CODE >767:C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_1.s
+7FD cinit CODE >773:C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_1.s
+7FD cinit CODE >775:C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_1.s
+7FE cinit CODE >776:C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_1.s
+755 text3 CODE >56:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+755 text3 CODE >57:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+757 text3 CODE >58:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+75B text3 CODE >59:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+762 text3 CODE >60:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+74B text2 CODE >62:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+74B text2 CODE >63:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+74D text2 CODE >64:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+74E text2 CODE >65:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+74F text2 CODE >66:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+750 text2 CODE >67:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+751 text2 CODE >68:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+752 text2 CODE >69:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+753 text2 CODE >70:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+754 text2 CODE >71:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+763 text1 CODE >34:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+763 text1 CODE >35:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+765 text1 CODE >36:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+766 text1 CODE >37:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+767 text1 CODE >38:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+768 text1 CODE >39:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+769 text1 CODE >40:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+76A text1 CODE >41:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+76B text1 CODE >42:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+76C text1 CODE >44:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+76D text1 CODE >45:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+76F text1 CODE >47:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+771 text1 CODE >48:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+773 text1 CODE >49:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+775 text1 CODE >50:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+776 text1 CODE >51:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+778 text1 CODE >52:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+779 text1 CODE >53:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+77A text1 CODE >54:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+77B maintext CODE >73:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+77B maintext CODE >75:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+77E maintext CODE >79:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+785 maintext CODE >80:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+788 maintext CODE >81:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+78D maintext CODE >81:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+791 maintext CODE >81:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+795 maintext CODE >82:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+797 maintext CODE >83:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+79D maintext CODE >83:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7A1 maintext CODE >83:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7A5 maintext CODE >84:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7A7 maintext CODE >85:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7AD maintext CODE >85:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7B1 maintext CODE >85:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7B5 maintext CODE >86:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7B7 maintext CODE >87:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7BD maintext CODE >87:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7C1 maintext CODE >87:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7C5 maintext CODE >88:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7C7 maintext CODE >89:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7CD maintext CODE >89:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7D1 maintext CODE >89:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7D5 maintext CODE >90:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7D7 maintext CODE >91:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7DD maintext CODE >91:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7E1 maintext CODE >91:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7E5 maintext CODE >92:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7E7 maintext CODE >93:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7ED maintext CODE >93:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7F1 maintext CODE >93:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7F5 maintext CODE >94:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7F7 maintext CODE >95:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+7F8 maintext CODE >96:C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -183,39 +227,41 @@ $dist/default/production\TP2b_pot.X.production.o
 %SYMTAB
 ___latbits 3 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 0 0 ABS 0 - -
+__Hspace_1 77 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-_init FA6 0 CODE 0 text1 dist/default/production\TP2b_pot.X.production.o
-_main FD0 0 CODE 0 maintext dist/default/production\TP2b_pot.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+_init EC6 0 CODE 0 text1 dist/default/production\TP2b_pot.X.production.o
+_main EF6 0 CODE 0 maintext dist/default/production\TP2b_pot.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
-___stack_hi 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-___stack_lo 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-start 4 0 CODE 0 init C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+___stack_hi 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+___stack_lo 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+start 4 0 CODE 0 init C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 wtemp0 7E 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ADRESH 9C 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-___stacklo 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+_ad_read EAA 0 CODE 0 text3 dist/default/production\TP2b_pot.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+___stacklo 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 start_initialization FFA 0 CODE 0 cinit dist/default/production\TP2b_pot.X.production.o
 _TRISAbits 8C 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
 _TRISBbits 8D 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
 _TRISDbits 8F 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+?_ad_read 70 0 COMMON 1 cstackCOMMON dist/default/production\TP2b_pot.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -344,9 +390,9 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 800 0 ABS 0 - -
-__S1 0 0 ABS 0 - -
+__S1 77 0 ABS 0 - -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -369,10 +415,11 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext FD0 0 CODE 0 maintext dist/default/production\TP2b_pot.X.production.o
+__pmaintext EF6 0 CODE 0 maintext dist/default/production\TP2b_pot.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
+main@value 75 0 COMMON 1 cstackCOMMON dist/default/production\TP2b_pot.X.production.o
 _ADCON0bits 9D 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
 _ADCON1bits 9E 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -386,26 +433,31 @@ end_of_initialization FFA 0 CODE 0 cinit dist/default/production\TP2b_pot.X.prod
 __Hintentry 4 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
-__ptext1 FA6 0 CODE 0 text1 dist/default/production\TP2b_pot.X.production.o
+__ptext1 EC6 0 CODE 0 text1 dist/default/production\TP2b_pot.X.production.o
+__ptext2 E96 0 CODE 0 text2 dist/default/production\TP2b_pot.X.production.o
+__ptext3 EAA 0 CODE 0 text3 dist/default/production\TP2b_pot.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-___heap_lo 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+___heap_hi 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+___heap_lo 0 0 ABS 0 - C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/production\TP2b_pot.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\TP2b_pot.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\TP2b_pot.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-__end_of_init FD0 0 CODE 0 text1 dist/default/production\TP2b_pot.X.production.o
+__end_of_ad_read EC6 0 CODE 0 text3 dist/default/production\TP2b_pot.X.production.o
+__end_of_init EF6 0 CODE 0 text1 dist/default/production\TP2b_pot.X.production.o
 __end_of_main FFA 0 CODE 0 maintext dist/default/production\TP2b_pot.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
+_down_led E96 0 CODE 0 text2 dist/default/production\TP2b_pot.X.production.o
 __initialization FFA 0 CODE 0 cinit dist/default/production\TP2b_pot.X.production.o
+__end_of_down_led EAA 0 CODE 0 text2 dist/default/production\TP2b_pot.X.production.o
 _ANSELAbits 18C 0 ABS 0 - dist/default/production\TP2b_pot.X.production.o
-___int_stack_hi 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
-___int_stack_lo 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAsrto.\driver_tmp_10.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAs6ok.\driver_tmp_10.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -432,8 +484,11 @@ ___int_stack_lo 0 0 STACK 2 stack C:\Users\mathi\AppData\Local\Temp\xcAsrto.\dri
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FD FFA 3 2
-text1 0 7D3 FA6 15 2
-maintext 0 7E8 FD0 15 2
+text1 0 763 EC6 18 2
+text2 0 74B E96 A 2
+text3 0 755 EAA E 2
+maintext 0 77B EF6 82 2
+cstackCOMMON 1 70 70 7 1
 reset_vec 0 0 0 4 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

@@ -48,21 +48,53 @@ void init() {
     ADCON0bits.CHS = 0;
     ADCON1bits.ADCS = 0;
     ADCON1bits.ADNREF = 0;
+    ADCON1bits.ADPREF = 0;
     ADCON1bits.ADFM = 0;
+    ADCON0bits.GO_nDONE = 1;
 }
+
+int ad_read() {
+    ADCON0bits.ADGO = 1;
+    while(ADCON0bits.ADGO);
+    return ADRESH;
+}
+
+void down_led() {
+    LED1 = 0;
+    LED2 = 0;
+    LED3 = 0;
+    LED4 = 0;
+    LED5 = 0;
+    LED6 = 0;
+    LED7 = 0;
+    LED8 = 0;
+}
+
 void main(void) {
     /* Code d'initialisation */
     init();
     
     
     while(1){
-        if (ADRESH < 150) {
-            LED1 = 1;
-            LED2 = 0;
-            LED8 = 1;
+        int value = ad_read();
+        down_led();
+        if (value< 32) {
+            LED1=1;
+        } else if (value < 64) {
+            LED2=1;
+        } else if (value < 96) {
+            LED3=1;
+        } else if (value < 128) {
+            LED4=1;
+        } else if (value < 160) {
+            LED5=1;
+        } else if (value < 192) {
+            LED6=1;
+        } else if (value < 224) {
+            LED7=1;
         } else {
-            LED1 = 0;
-            LED2 = 1;
+            LED8=1;
         }
+        
     }
 }

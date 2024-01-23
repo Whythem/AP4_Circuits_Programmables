@@ -9,7 +9,11 @@
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "34 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
 [v _init init `(v  1 e 1 0 ]
-"53
+"56
+[v _ad_read ad_read `(i  1 e 2 0 ]
+"62
+[v _down_led down_led `(v  1 e 1 0 ]
+"73
 [v _main main `(v  1 e 1 0 ]
 [s S181 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
@@ -113,13 +117,25 @@
 "3819
 [u S92 . 1 `S85 1 . 1 0 ]
 [v _ANSELAbits ANSELAbits `VES92  1 e 1 @396 ]
-"53 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
+"73 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP2b_pot.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"68
+"79
+[v main@value value `i  1 a 2 5 ]
+"100
 } 0
 "34
 [v _init init `(v  1 e 1 0 ]
 {
-"52
+"54
+} 0
+"62
+[v _down_led down_led `(v  1 e 1 0 ]
+{
+"71
+} 0
+"56
+[v _ad_read ad_read `(i  1 e 2 0 ]
+{
+"60
 } 0
