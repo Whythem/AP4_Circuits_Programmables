@@ -7,6 +7,7 @@
 
 
 #include "configbits.h" // Bits de configuration
+#include <stdio.h>
 #include <xc.h>         // Definition des registres specifiques au uC
 #include "lcd.h"
 #include "spi.h"
@@ -18,8 +19,10 @@
 
 #define POTO PORTAbits.RA0
 
-int isChiffrement = 1;
+int isChiffrement;
 int offset = 1;
+
+char texte[100];
 
 void init(void) {
     // Init entrée
@@ -27,6 +30,16 @@ void init(void) {
     POTO = 1;
     DIR_LED1 = 0;
     ANSELBbits.ANSB0 = 0; // Passage en numérique du btn 1
+    
+    // Init POTO
+    ANSELAbits.ANSA0 = 1; 
+    ADCON0bits.ADON = 1;
+    ADCON0bits.CHS = 0;
+    ADCON1bits.ADCS = 0;
+    ADCON1bits.ADNREF = 0;
+    ADCON1bits.ADPREF = 0;
+    ADCON1bits.ADFM = 0;
+    ADCON0bits.GO_nDONE = 1;
     
     // Init ecran led
     SPI_InitializePins();
@@ -60,34 +73,87 @@ void init(void) {
 void setTexteLed() {
     LCD_Clear();
     LCD_GoTo(0,0);
-    if (isChiffrement) {
-        LCD_WriteString("Chiffre : ");
+    if (isChiffrement == 1) {
+        sprintf(texte, "Chiffre : %d", offset);
+        LCD_WriteString(texte);
     } else {
-        LCD_WriteString("Dechiffre : ");
+        sprintf(texte, "Dechiffre : %d", offset);
+        LCD_WriteString(texte);
     }
 }
+
+int transformCesar(int value, int offsetBis) {
+    int retour;
+    if (isChiffrement == 1) {
+        if (value < 58) {
+            if (value + offsetBis >= 58) {
+                offsetBis = offsetBis - (58 - value);
+                retour = transformCesar(97, offsetBis);
+            } else {
+                retour = value + offsetBis;
+            }
+        } else {
+            if (value + offsetBis >= 123) {
+                offsetBis = offsetBis - (123 - value);
+                retour = transformCesar(48, offsetBis);
+            } else {
+                retour = value + offsetBis;
+            }
+        }
+    } else {
+        if (value > 96) {
+            if (value - offsetBis <= 96) {
+                offsetBis = offsetBis - (value - 96);
+                retour = transformCesar(57, offsetBis);
+            } else {
+                retour = value - offsetBis;
+            }
+        } else {
+            if (value - offsetBis <= 47) {
+                offsetBis = offsetBis - (value - 47);
+                retour = transformCesar(122, offsetBis);
+            } else {
+                retour = value - offsetBis;
+            }
+        }
+    }
+            
+    return retour; 
+}
+
 
 void __interrupt() isr(void) {
-    // TODO chiffré ou déchiffré
-    if (isChiffrement) {
-        TX1REG = (char)((int)RC1REG + offset);
-    } else {
-        TX1REG = (char)((int)RC1REG - offset);
+    // TODO verif correct 
+    char tmp = RC1REG;
+    
+    //verif 0 à z
+    if ((int)tmp > 64 && (int)tmp < 91) {
+        tmp = (char)((int)tmp + 32);
+    } 
+    
+    if (!((int)tmp < 48 || (int)tmp > 123 || ((int)tmp > 57 && (int)tmp < 97))) {
+        
+        TX1REG = (char)transformCesar((int)tmp, offset);
     }
 }
 
-
+int ad_read() {
+    ADCON0bits.ADGO = 1;
+    while(ADCON0bits.ADGO);
+    return ADRESH;
+}
 
 void main(void) {
     /* Code d'initialisation */
     
     init();
     
+    isChiffrement = 1;
     setTexteLed();
     while(1) {
         if (!PORTBbits.RB0) {
             //Changement chiffrement ou déchiffrement
-            if (isChiffrement) {
+            if (isChiffrement == 1) {
                 isChiffrement = 0;
                 setTexteLed();
             } else {
@@ -98,6 +164,11 @@ void main(void) {
             }
         }
         
-        
+        //offset = 35 max
+        int value = ad_read();
+        if ((int)(value / 7) != (int)offset) {
+            setTexteLed();
+        }
+        offset = (int)((double)value / 7.5)+1;
     }
 }
