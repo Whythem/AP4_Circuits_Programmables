@@ -2,6 +2,7 @@ import serial
 import serial.tools.list_ports
 import tkinter as tk
 from tkinter import ttk
+import threading
 
 def get_com_ports():
     """Fonction pour obtenir la liste des ports COM disponibles."""
@@ -27,12 +28,20 @@ def read_serial_data():
         try:
             # Lire une ligne de données depuis le port série
             data = serial_port.readline().decode("utf-8")
-            # Afficher les données dans le TextBox
-            text_box.insert(tk.END, data)
-            # Faire défiler vers le bas pour afficher les nouvelles données
-            text_box.yview(tk.END)
+            # Traitement des données (exemple: diviser la ligne en différentes informations)
+            process_data(data)
         except serial.SerialException:
             break
+
+def process_data(data):
+    """Fonction pour traiter les données et mettre à jour les informations."""
+    # Exemple: Diviser la ligne en différentes parties (séparées par des virgules)
+    parts = data.strip().split(',')
+    # Mettre à jour les étiquettes avec les informations
+    if len(parts) >= 3:
+        label1.config(text=f"Info 1: {parts[0]}")
+        label2.config(text=f"Info 2: {parts[1]}")
+        label3.config(text=f"Info 3: {parts[2]}")
 
 # Création de la fenêtre principale
 root = tk.Tk()
@@ -50,9 +59,15 @@ ports_menu.bind("<<ComboboxSelected>>", on_select)
 status_label = ttk.Label(root, text="")
 status_label.grid(row=1, column=0, padx=10, pady=10)
 
-# Création du TextBox pour afficher les données reçues
-text_box = tk.Text(root, wrap=tk.WORD, width=50, height=10)
-text_box.grid(row=2, column=0, padx=10, pady=10)
+# Création d'étiquettes pour afficher les informations
+label1 = ttk.Label(root, text="Info 1: ")
+label1.grid(row=2, column=0, padx=10, pady=5, sticky=tk.W)
+
+label2 = ttk.Label(root, text="Info 2: ")
+label2.grid(row=3, column=0, padx=10, pady=5, sticky=tk.W)
+
+label3 = ttk.Label(root, text="Info 3: ")
+label3.grid(row=4, column=0, padx=10, pady=5, sticky=tk.W)
 
 # Création d'un objet de port série
 serial_port = serial.Serial()
