@@ -9893,7 +9893,7 @@ void SPI_ClearWriteCollisionStatus(void);
 # 13 "main.c" 2
 # 22 "main.c"
 int isChiffrement;
-int offset = 1;
+int offset;
 
 char texte[100];
 
@@ -10021,6 +10021,7 @@ void main(void) {
 
     init();
 
+    offset = 1;
     isChiffrement = 1;
     setTexteLed();
     while(1) {
@@ -10039,9 +10040,9 @@ void main(void) {
 
 
         int value = ad_read();
-        if ((int)(value / 7) != (int)offset) {
+        if ((int)(value / 7.5 +1) != (int)offset) {
+            offset = (int)((double)value / 7.5)+1;
             setTexteLed();
         }
-        offset = (int)((double)value / 7.5)+1;
     }
 }

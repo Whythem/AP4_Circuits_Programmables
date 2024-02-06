@@ -1228,11 +1228,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 22: int isChiffrement;
 [v _isChiffrement `i ~T0 @X0 1 e ]
 "23
-[; ;main.c: 23: int offset = 1;
+[; ;main.c: 23: int offset;
 [v _offset `i ~T0 @X0 1 e ]
-[i _offset
--> 1 `i
-]
 "25
 [; ;main.c: 25: char texte[100];
 [v _texte `uc ~T0 @X0 -> 100 `i e ]
@@ -1609,88 +1606,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 149:     init();
 [e ( _init ..  ]
 "151
-[; ;main.c: 151:     isChiffrement = 1;
-[e = _isChiffrement -> 1 `i ]
+[; ;main.c: 151:     offset = 1;
+[e = _offset -> 1 `i ]
 "152
-[; ;main.c: 152:     setTexteLed();
-[e ( _setTexteLed ..  ]
+[; ;main.c: 152:     isChiffrement = 1;
+[e = _isChiffrement -> 1 `i ]
 "153
-[; ;main.c: 153:     while(1) {
+[; ;main.c: 153:     setTexteLed();
+[e ( _setTexteLed ..  ]
+"154
+[; ;main.c: 154:     while(1) {
 [e :U 816 ]
 {
-"154
-[; ;main.c: 154:         if (!PORTBbits.RB0) {
+"155
+[; ;main.c: 155:         if (!PORTBbits.RB0) {
 [e $ ! ! != -> . . _PORTBbits 0 0 `i -> 0 `i 818  ]
 {
-"156
-[; ;main.c: 156:             if (isChiffrement == 1) {
+"157
+[; ;main.c: 157:             if (isChiffrement == 1) {
 [e $ ! == _isChiffrement -> 1 `i 819  ]
 {
-"157
-[; ;main.c: 157:                 isChiffrement = 0;
-[e = _isChiffrement -> 0 `i ]
 "158
-[; ;main.c: 158:                 setTexteLed();
-[e ( _setTexteLed ..  ]
+[; ;main.c: 158:                 isChiffrement = 0;
+[e = _isChiffrement -> 0 `i ]
 "159
-[; ;main.c: 159:             } else {
+[; ;main.c: 159:                 setTexteLed();
+[e ( _setTexteLed ..  ]
+"160
+[; ;main.c: 160:             } else {
 }
 [e $U 820  ]
 [e :U 819 ]
 {
-"160
-[; ;main.c: 160:                 isChiffrement = 1;
-[e = _isChiffrement -> 1 `i ]
 "161
-[; ;main.c: 161:                 setTexteLed();
-[e ( _setTexteLed ..  ]
+[; ;main.c: 161:                 isChiffrement = 1;
+[e = _isChiffrement -> 1 `i ]
 "162
-[; ;main.c: 162:             }
+[; ;main.c: 162:                 setTexteLed();
+[e ( _setTexteLed ..  ]
+"163
+[; ;main.c: 163:             }
 }
 [e :U 820 ]
-"163
-[; ;main.c: 163:             while (!PORTBbits.RB0) {
+"164
+[; ;main.c: 164:             while (!PORTBbits.RB0) {
 [e $U 821  ]
 [e :U 822 ]
 {
-"164
-[; ;main.c: 164:             }
+"165
+[; ;main.c: 165:             }
 }
 [e :U 821 ]
-"163
-[; ;main.c: 163:             while (!PORTBbits.RB0) {
+"164
+[; ;main.c: 164:             while (!PORTBbits.RB0) {
 [e $ ! != -> . . _PORTBbits 0 0 `i -> 0 `i 822  ]
 [e :U 823 ]
-"165
-[; ;main.c: 165:         }
+"166
+[; ;main.c: 166:         }
 }
 [e :U 818 ]
-"168
-[; ;main.c: 168:         int value = ad_read();
+"169
+[; ;main.c: 169:         int value = ad_read();
 [v _value `i ~T0 @X0 1 a ]
 [e = _value ( _ad_read ..  ]
-"169
-[; ;main.c: 169:         if ((int)(value / 7) != (int)offset) {
-[e $ ! != / _value -> 7 `i _offset 824  ]
-{
 "170
-[; ;main.c: 170:             setTexteLed();
-[e ( _setTexteLed ..  ]
+[; ;main.c: 170:         if ((int)(value / 7.5 +1) != (int)offset) {
+[e $ ! != -> + / -> _value `d .7.5 -> -> 1 `i `d `i _offset 824  ]
+{
 "171
-[; ;main.c: 171:         }
+[; ;main.c: 171:             offset = (int)((double)value / 7.5)+1;
+[e = _offset + -> / -> _value `d .7.5 `i -> 1 `i ]
+"172
+[; ;main.c: 172:             setTexteLed();
+[e ( _setTexteLed ..  ]
+"173
+[; ;main.c: 173:         }
 }
 [e :U 824 ]
-"172
-[; ;main.c: 172:         offset = (int)((double)value / 7.5)+1;
-[e = _offset + -> / -> _value `d .7.5 `i -> 1 `i ]
-"173
-[; ;main.c: 173:     }
+"174
+[; ;main.c: 174:     }
 }
 [e :U 815 ]
 [e $U 816  ]
 [e :U 817 ]
-"174
-[; ;main.c: 174: }
+"175
+[; ;main.c: 175: }
 [e :UE 814 ]
 }
 [p f _sprintf 8388736 ]

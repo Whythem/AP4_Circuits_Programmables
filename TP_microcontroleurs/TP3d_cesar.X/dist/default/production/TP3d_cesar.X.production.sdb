@@ -383,9 +383,9 @@
 "146
 [v _main main `(v  1 e 1 0 ]
 {
-"168
-[v main@value value `i  1 a 2 53 ]
-"174
+"169
+[v main@value value `i  1 a 2 70 ]
+"175
 } 0
 "73
 [v _setTexteLed setTexteLed `(v  1 e 1 0 ]
@@ -589,10 +589,10 @@
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 49 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 48 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 69 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 68 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 40 ]
+[v ___fltol@f1 f1 `d  1 p 4 60 ]
 "70
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
@@ -614,6 +614,22 @@
 [v ___fldiv@a a `d  1 p 4 14 ]
 [v ___fldiv@b b `d  1 p 4 18 ]
 "185
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 59 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 58 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 57 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 56 ]
+"10
+[v ___fladd@b b `d  1 p 4 40 ]
+[v ___fladd@a a `d  1 p 4 44 ]
+"237
 } 0
 "125 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP3d_cesar.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
