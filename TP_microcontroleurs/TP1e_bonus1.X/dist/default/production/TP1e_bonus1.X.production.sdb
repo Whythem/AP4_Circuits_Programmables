@@ -34,30 +34,6 @@
 ]
 [u S148 . 1 `S134 1 . 1 0 `S143 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES148  1 e 1 @11 ]
-[s S220 . 1 `uc 1 RB0 1 0 :1:0 
-`uc 1 RB1 1 0 :1:1 
-`uc 1 RB2 1 0 :1:2 
-`uc 1 RB3 1 0 :1:3 
-`uc 1 RB4 1 0 :1:4 
-`uc 1 RB5 1 0 :1:5 
-`uc 1 RB6 1 0 :1:6 
-`uc 1 RB7 1 0 :1:7 
-]
-"508
-[u S229 . 1 `S220 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES229  1 e 1 @13 ]
-[s S64 . 1 `uc 1 RD0 1 0 :1:0 
-`uc 1 RD1 1 0 :1:1 
-`uc 1 RD2 1 0 :1:2 
-`uc 1 RD3 1 0 :1:3 
-`uc 1 RD4 1 0 :1:4 
-`uc 1 RD5 1 0 :1:5 
-`uc 1 RD6 1 0 :1:6 
-`uc 1 RD7 1 0 :1:7 
-]
-"632
-[u S73 . 1 `S64 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES73  1 e 1 @15 ]
 [s S85 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -142,20 +118,44 @@
 ]
 [u S201 . 1 `S187 1 . 1 0 `S194 1 . 1 0 ]
 [v _OPTION_REGbits OPTION_REGbits `VES201  1 e 1 @149 ]
+[s S220 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2369
+[u S229 . 1 `S220 1 . 1 0 ]
+[v _LATBbits LATBbits `VES229  1 e 1 @269 ]
+[s S64 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"2493
+[u S73 . 1 `S64 1 . 1 0 ]
+[v _LATDbits LATDbits `VES73  1 e 1 @271 ]
 "30 C:\Users\mathi\Document\Gits\AP4_Circuits_Programmables\TP_microcontroleurs\TP1e_bonus1.X\main.c
 [v _tick_count tick_count `i  1 e 2 0 ]
 "91
 [v _main main `(v  1 e 1 0 ]
 {
-"132
+"142
 [v main@i_325 i `i  1 a 2 7 ]
-"125
+"132
 [v main@i_324 i `i  1 a 2 5 ]
-"118
+"122
 [v main@i_323 i `i  1 a 2 3 ]
-"111
+"112
 [v main@i i `i  1 a 2 1 ]
-"140
+"150
 } 0
 "32
 [v _init_leds init_leds `(v  1 e 1 0 ]

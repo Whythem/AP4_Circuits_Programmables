@@ -9734,32 +9734,32 @@ void modif_led() {
 
 
         case 250:
-            PORTDbits.RD0 = 0;
-            PORTDbits.RD1 = 1;
+            LATDbits.LATD0 = 0;
+            LATDbits.LATD1 = 1;
             break;
 
 
 
 
         case 500:
-            PORTDbits.RD1 = 0;
-            PORTDbits.RD2 = 1;
+            LATDbits.LATD1 = 0;
+            LATDbits.LATD2 = 1;
             break;
 
 
 
 
         case 750:
-            PORTDbits.RD2 = 0;
-            PORTDbits.RD3 = 1;
+            LATDbits.LATD2 = 0;
+            LATDbits.LATD3 = 1;
             break;
 
 
 
 
         case 1000:
-            PORTDbits.RD3 = 0;
-            PORTDbits.RD0 = 1;
+            LATDbits.LATD3 = 0;
+            LATDbits.LATD0 = 1;
             tick_count = 0;
             break;
     }
@@ -9794,28 +9794,38 @@ void main(void) {
 
     PR2 = 249;
     while(1){
-        PORTBbits.RB3 = 1;
+        LATBbits.LATB3 = 1;
+        LATBbits.LATB0 = 0;
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){
             }
             INTCONbits.TMR0IF = 0;
         }
-        PORTBbits.RB2 = 1;
+
+        LATBbits.LATB2 = 1;
+        LATBbits.LATB3 = 0;
+
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){
             }
             INTCONbits.TMR0IF = 0;
         }
-        PORTBbits.RB1 = 1;
+
+        LATBbits.LATB1 = 1;
+        LATBbits.LATB2 = 0;
+
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){
             }
             INTCONbits.TMR0IF = 0;
         }
-        PORTBbits.RB0 = 1;
+
+        LATBbits.LATB0 = 1;
+        LATBbits.LATB1 = 0;
+
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){

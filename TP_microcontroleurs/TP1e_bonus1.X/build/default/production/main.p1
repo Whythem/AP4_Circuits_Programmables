@@ -21,17 +21,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1289
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 1289: extern volatile TRISBbits_t TRISBbits __attribute__((address(0x08D)));
 [v _TRISBbits `VS70 ~T0 @X0 0 e@141 ]
-"621
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 621:     struct {
-[s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S40 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
-"620
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 620: typedef union {
-[u S39 `S40 1 ]
-[n S39 . . ]
-"632
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 632: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x00F)));
-[v _PORTDbits `VS39 ~T0 @X0 0 e@15 ]
+"2482
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 2482:     struct {
+[s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S121 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"2481
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 2481: typedef union {
+[u S120 `S121 1 ]
+[n S120 . . ]
+"2493
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 2493: extern volatile LATDbits_t LATDbits __attribute__((address(0x10F)));
+[v _LATDbits `VS120 ~T0 @X0 0 e@271 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
 "721
@@ -105,17 +105,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1119
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 1119: extern volatile unsigned char PR2 __attribute__((address(0x01B)));
 [v _PR2 `Vuc ~T0 @X0 0 e@27 ]
-"497
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 497:     struct {
-[s S36 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S36 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"496
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 496: typedef union {
-[u S35 `S36 1 ]
-[n S35 . . ]
-"508
-[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 508: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x00D)));
-[v _PORTBbits `VS35 ~T0 @X0 0 e@13 ]
+"2358
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 2358:     struct {
+[s S117 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S117 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"2357
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 2357: typedef union {
+[u S116 `S117 1 ]
+[n S116 . . ]
+"2369
+[; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 2369: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
+[v _LATBbits `VS116 ~T0 @X0 0 e@269 ]
 "890
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC12-16F1xxx_DFP/1.6.241/xc8\pic\include\proc\pic16f1719.h: 890: extern volatile unsigned char TMR0 __attribute__((address(0x015)));
 [v _TMR0 `Vuc ~T0 @X0 0 e@21 ]
@@ -1137,11 +1137,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 49:         case 250:
 [e :U 790 ]
 "50
-[; ;main.c: 50:             PORTDbits.RD0 = 0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 50:             LATDbits.LATD0 = 0;
+[e = . . _LATDbits 0 0 -> -> 0 `i `uc ]
 "51
-[; ;main.c: 51:             PORTDbits.RD1 = 1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 51:             LATDbits.LATD1 = 1;
+[e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
 "52
 [; ;main.c: 52:             break;
 [e $U 788  ]
@@ -1149,11 +1149,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 57:         case 500:
 [e :U 791 ]
 "58
-[; ;main.c: 58:             PORTDbits.RD1 = 0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 58:             LATDbits.LATD1 = 0;
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
 "59
-[; ;main.c: 59:             PORTDbits.RD2 = 1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 59:             LATDbits.LATD2 = 1;
+[e = . . _LATDbits 0 2 -> -> 1 `i `uc ]
 "60
 [; ;main.c: 60:             break;
 [e $U 788  ]
@@ -1161,11 +1161,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 65:         case 750:
 [e :U 792 ]
 "66
-[; ;main.c: 66:             PORTDbits.RD2 = 0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 66:             LATDbits.LATD2 = 0;
+[e = . . _LATDbits 0 2 -> -> 0 `i `uc ]
 "67
-[; ;main.c: 67:             PORTDbits.RD3 = 1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 67:             LATDbits.LATD3 = 1;
+[e = . . _LATDbits 0 3 -> -> 1 `i `uc ]
 "68
 [; ;main.c: 68:             break;
 [e $U 788  ]
@@ -1173,11 +1173,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 73:         case 1000:
 [e :U 793 ]
 "74
-[; ;main.c: 74:             PORTDbits.RD3 = 0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 74:             LATDbits.LATD3 = 0;
+[e = . . _LATDbits 0 3 -> -> 0 `i `uc ]
 "75
-[; ;main.c: 75:             PORTDbits.RD0 = 1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 75:             LATDbits.LATD0 = 1;
+[e = . . _LATDbits 0 0 -> -> 1 `i `uc ]
 "76
 [; ;main.c: 76:             tick_count = 0;
 [e = _tick_count -> 0 `i ]
@@ -1283,10 +1283,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 799 ]
 {
 "110
-[; ;main.c: 110:         PORTBbits.RB3 = 1;
-[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 110:         LATBbits.LATB3 = 1;
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 "111
-[; ;main.c: 111:         for (int i = 0; i <= 1000; i++) {
+[; ;main.c: 111:         LATBbits.LATB0 = 0;
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+"112
+[; ;main.c: 112:         for (int i = 0; i <= 1000; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1294,37 +1297,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 802  ]
 [e :U 801 ]
 {
-"112
-[; ;main.c: 112:             TMR0 = 130;
-[e = _TMR0 -> -> 130 `i `uc ]
 "113
-[; ;main.c: 113:             while(INTCONbits.TMR0IF == 0){
+[; ;main.c: 113:             TMR0 = 130;
+[e = _TMR0 -> -> 130 `i `uc ]
+"114
+[; ;main.c: 114:             while(INTCONbits.TMR0IF == 0){
 [e $U 804  ]
 [e :U 805 ]
 {
-"114
-[; ;main.c: 114:             }
+"115
+[; ;main.c: 115:             }
 }
 [e :U 804 ]
-"113
-[; ;main.c: 113:             while(INTCONbits.TMR0IF == 0){
+"114
+[; ;main.c: 114:             while(INTCONbits.TMR0IF == 0){
 [e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 805  ]
 [e :U 806 ]
-"115
-[; ;main.c: 115:             INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
 "116
-[; ;main.c: 116:         }
+[; ;main.c: 116:             INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"117
+[; ;main.c: 117:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 1000 `i 801  ]
 [e :U 802 ]
 }
-"117
-[; ;main.c: 117:         PORTBbits.RB2 = 1;
-[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-"118
-[; ;main.c: 118:         for (int i = 0; i <= 1000; i++) {
+"119
+[; ;main.c: 119:         LATBbits.LATB2 = 1;
+[e = . . _LATBbits 0 2 -> -> 1 `i `uc ]
+"120
+[; ;main.c: 120:         LATBbits.LATB3 = 0;
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+"122
+[; ;main.c: 122:         for (int i = 0; i <= 1000; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1332,37 +1338,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 808  ]
 [e :U 807 ]
 {
-"119
-[; ;main.c: 119:             TMR0 = 130;
+"123
+[; ;main.c: 123:             TMR0 = 130;
 [e = _TMR0 -> -> 130 `i `uc ]
-"120
-[; ;main.c: 120:             while(INTCONbits.TMR0IF == 0){
+"124
+[; ;main.c: 124:             while(INTCONbits.TMR0IF == 0){
 [e $U 810  ]
 [e :U 811 ]
 {
-"121
-[; ;main.c: 121:             }
+"125
+[; ;main.c: 125:             }
 }
 [e :U 810 ]
-"120
-[; ;main.c: 120:             while(INTCONbits.TMR0IF == 0){
+"124
+[; ;main.c: 124:             while(INTCONbits.TMR0IF == 0){
 [e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 811  ]
 [e :U 812 ]
-"122
-[; ;main.c: 122:             INTCONbits.TMR0IF = 0;
+"126
+[; ;main.c: 126:             INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"123
-[; ;main.c: 123:         }
+"127
+[; ;main.c: 127:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ <= _i -> 1000 `i 807  ]
 [e :U 808 ]
 }
-"124
-[; ;main.c: 124:         PORTBbits.RB1 = 1;
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-"125
-[; ;main.c: 125:         for (int i = 0; i <= 1000; i++) {
+"129
+[; ;main.c: 129:         LATBbits.LATB1 = 1;
+[e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
+"130
+[; ;main.c: 130:         LATBbits.LATB2 = 0;
+[e = . . _LATBbits 0 2 -> -> 0 `i `uc ]
+"132
+[; ;main.c: 132:         for (int i = 0; i <= 1000; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -1370,60 +1379,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 814  ]
 [e :U 813 ]
 {
-"126
-[; ;main.c: 126:             TMR0 = 130;
-[e = _TMR0 -> -> 130 `i `uc ]
-"127
-[; ;main.c: 127:             while(INTCONbits.TMR0IF == 0){
-[e $U 816  ]
-[e :U 817 ]
-{
-"128
-[; ;main.c: 128:             }
-}
-[e :U 816 ]
-"127
-[; ;main.c: 127:             while(INTCONbits.TMR0IF == 0){
-[e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 817  ]
-[e :U 818 ]
-"129
-[; ;main.c: 129:             INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"130
-[; ;main.c: 130:         }
-}
-[e ++ _i -> 1 `i ]
-[e $ <= _i -> 1000 `i 813  ]
-[e :U 814 ]
-}
-"131
-[; ;main.c: 131:         PORTBbits.RB0 = 1;
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"132
-[; ;main.c: 132:         for (int i = 0; i <= 1000; i++) {
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ <= _i -> 1000 `i 819  ]
-[e $U 820  ]
-[e :U 819 ]
-{
 "133
 [; ;main.c: 133:             TMR0 = 130;
 [e = _TMR0 -> -> 130 `i `uc ]
 "134
 [; ;main.c: 134:             while(INTCONbits.TMR0IF == 0){
-[e $U 822  ]
-[e :U 823 ]
+[e $U 816  ]
+[e :U 817 ]
 {
 "135
 [; ;main.c: 135:             }
 }
-[e :U 822 ]
+[e :U 816 ]
 "134
 [; ;main.c: 134:             while(INTCONbits.TMR0IF == 0){
-[e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 823  ]
-[e :U 824 ]
+[e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 817  ]
+[e :U 818 ]
 "136
 [; ;main.c: 136:             INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
@@ -1431,16 +1402,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 137:         }
 }
 [e ++ _i -> 1 `i ]
+[e $ <= _i -> 1000 `i 813  ]
+[e :U 814 ]
+}
+"139
+[; ;main.c: 139:         LATBbits.LATB0 = 1;
+[e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
+"140
+[; ;main.c: 140:         LATBbits.LATB1 = 0;
+[e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
+"142
+[; ;main.c: 142:         for (int i = 0; i <= 1000; i++) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ <= _i -> 1000 `i 819  ]
+[e $U 820  ]
+[e :U 819 ]
+{
+"143
+[; ;main.c: 143:             TMR0 = 130;
+[e = _TMR0 -> -> 130 `i `uc ]
+"144
+[; ;main.c: 144:             while(INTCONbits.TMR0IF == 0){
+[e $U 822  ]
+[e :U 823 ]
+{
+"145
+[; ;main.c: 145:             }
+}
+[e :U 822 ]
+"144
+[; ;main.c: 144:             while(INTCONbits.TMR0IF == 0){
+[e $ == -> . . _INTCONbits 0 2 `i -> 0 `i 823  ]
+[e :U 824 ]
+"146
+[; ;main.c: 146:             INTCONbits.TMR0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"147
+[; ;main.c: 147:         }
+}
+[e ++ _i -> 1 `i ]
 [e $ <= _i -> 1000 `i 819  ]
 [e :U 820 ]
 }
-"139
-[; ;main.c: 139:     }
+"149
+[; ;main.c: 149:     }
 }
 [e :U 798 ]
 [e $U 799  ]
 [e :U 800 ]
-"140
-[; ;main.c: 140: }
+"150
+[; ;main.c: 150: }
 [e :UE 797 ]
 }

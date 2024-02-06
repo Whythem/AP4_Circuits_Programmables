@@ -18,14 +18,14 @@
 #define DIR_LED7 TRISBbits.TRISB2
 #define DIR_LED8 TRISBbits.TRISB3
 
-#define LED1 PORTDbits.RD0
-#define LED2 PORTDbits.RD1
-#define LED3 PORTDbits.RD2
-#define LED4 PORTDbits.RD3
-#define LED5 PORTBbits.RB0
-#define LED6 PORTBbits.RB1
-#define LED7 PORTBbits.RB2
-#define LED8 PORTBbits.RB3
+#define LED1 LATDbits.LATD0
+#define LED2 LATDbits.LATD1
+#define LED3 LATDbits.LATD2
+#define LED4 LATDbits.LATD3
+#define LED5 LATBbits.LATB0
+#define LED6 LATBbits.LATB1
+#define LED7 LATBbits.LATB2
+#define LED8 LATBbits.LATB3
 
 int tick_count = 0;
 
@@ -108,27 +108,37 @@ void main(void) {
     PR2 = 249;
     while(1){
         LED8 = 1;
+        LED5 = 0;
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){
             }
             INTCONbits.TMR0IF = 0;    
         }
+        
         LED7 = 1;
+        LED8 = 0;
+        
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){
             }
             INTCONbits.TMR0IF = 0;    
         }
+        
         LED6 = 1;
+        LED7 = 0;
+        
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){
             }
             INTCONbits.TMR0IF = 0;    
         }
+        
         LED5 = 1;
+        LED6 = 0;
+        
         for (int i = 0; i <= 1000; i++) {
             TMR0 = 130;
             while(INTCONbits.TMR0IF == 0){
